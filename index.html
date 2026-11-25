@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Surprise</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #ffe0eb, #f8b8d0);
+    color: #8e4563;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 35px 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px #c77b9a55;
+}
+
+.heart {
+    font-size: 65px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    50% { transform: scale(1.2); }
+}
+
+h1 {
+    color: #d65b8b;
+}
+
+p {
+    line-height: 1.7;
+}
+
+button {
+    background: #e879a4;
+    color: white;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #d65386;
+}
+
+#surprise {
+    display: none;
+    margin-top: 25px;
+    animation: appear 1s;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heart">💌</div>
+
+    <h1>Hey, You!</h1>
+
+    <p>
+        Someone has a special surprise for you.
+        Are you ready?
+    </p>
+
+    <button onclick="openSurprise()">
+        OPEN YOUR SURPRISE
+    </button>
+
+    <div id="surprise">
+
+        <div class="heart">🎂</div>
+
+        <h1>Happy Birthday!</h1>
+
+        <p>
+            Wishing you a beautiful day filled with
+            happiness, love, and wonderful memories.
+        </p>
+
+        <p>
+            May all your dreams come true! 💗
+        </p>
+
+        <h2>✨ You are special! ✨</h2>
+
+    </div>
+
+</div>
+
+<script>
+
+function openSurprise() {
+
+    document.getElementById("surprise").style.display = "block";
+
+}
+
+</script>
+
+</body>
+  </html>
